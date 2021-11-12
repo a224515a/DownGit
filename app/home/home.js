@@ -31,8 +31,10 @@ homeModule.config([
                     $scope.totalFiles = {val: 0};
 
                     var templateUrl = "https?://github.com/.+/.+";
-                    var downloadUrlInfix = "#/home?url=";
-                    var downloadUrlPrefix = "https://minhaskamal.github.io/DownGit/"+downloadUrlInfix;
+                    var downloadUrlInfix = "#/home?url=";					
+					var downloadUrlPrefix = "https://a224515a.github.io/DownGit/"+downloadUrlInfix;
+                    /* var downloadUrlPrefix = "https://minhaskamal.github.io/DownGit/"+downloadUrlInfix; */
+					
 
                     if ($routeParams.url) {
                         $scope.url = $routeParams.url;
@@ -52,7 +54,7 @@ homeModule.config([
                         downGitService.downloadZippedFiles(parameter, progress, toastr);
 
                     } else if ($scope.url != "") {
-                        toastr.warning("Invalid URL!", {iconClass: 'toast-down'});
+                        toastr.warning("非正確 GitHub URL!", {iconClass: 'toast-down'});
                     }
 
                     $scope.catchEnter = function(keyEvent) {
@@ -71,7 +73,7 @@ homeModule.config([
                         if ($scope.url.match(templateUrl)) {
                             $scope.downUrl = downloadUrlPrefix + $scope.url;
                         } else {
-                            toastr.warning("Invalid URL!", {iconClass: 'toast-down'});
+                            toastr.warning("非正確 GitHub URL!", {iconClass: 'toast-down'});
                         }
                     };
 

@@ -2,18 +2,19 @@
 <div class="text-center">
 
     <div class="vertical-space"></div>
-    <h1><a href="https://minhaskamal.github.io/DownGit">DownGit</a></h1>
+    <h1><a href="https://a224515a.github.io/DownGit/#/home">DownGit</a></h1>
     <div class="center-row"></div>
-    <h4>Create GitHub Resource Download Link</h4>
+	<h4>建立 GitHub 檔案下載連結</h4>
+    <p>Create GitHub Resource Download Link</p>
     
     
     <div class="vertical-space"></div>
     <div class="col-md-6 center-row">
-        <input name="url" type="url" placeholder="GitHub File or Directory Link" class="form-control" ng-model="url" ng-keypress="catchEnter($event)"></input>
+        <input name="url" type="url" placeholder="貼上 GitHub 連結 (檔案、資料夾皆可)" class="form-control" ng-model="url" ng-keypress="catchEnter($event)"></input>
     </div>
     <div class="btn-group center-row">
-        <button type="button" class="btn btn-default" ng-click="createDownLink()">Create Download Link</button>
-        <button type="button" class="btn btn-default" ng-click="download()">Download</button>
+        <button type="button" class="btn btn-default" ng-click="createDownLink()">僅建立下載連結</button>
+        <button type="button" class="btn btn-default" ng-click="download()">直接下載</button>
     </div>
     
     
